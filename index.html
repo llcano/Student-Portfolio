@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Portfolio | Mapúa University</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">SOIT Student Portfolio</div>
+        <ul class="nav-links">
+            <li><a href="#" onclick="showSection('home')">Home</a></li>
+            <li><a href="#" onclick="showSection('activities')">Activities</a></li>
+            <li><a href="#" onclick="showSection('outcomes')">Student Outcomes</a></li>
+            <li><a href="#" onclick="showSection('certifications')">Certifications</a></li>
+        </ul>
+    </nav>
+
+    <main id="content-area">
+        <section id="home" class="content-section">
+            <header class="hero">
+                <h1>Information Technology Student Portfolio</h1>
+                <p>1st Year Student | Mapúa University Makati</p>
+            </header>
+            <div class="profile-grid">
+                <div class="about-me">
+                    <h2>About Me</h2>
+                    <p>Enter your introduction here, following the SOIT format.</p>
+                </div>
+                <div class="profile-card">
+                    <h2>Profile</h2>
+                    <ul>
+                        <li><strong>Full Name:</strong> [Your Name]</li>
+                        <li><strong>Degree Program:</strong> BS Information Technology</li>
+                        <li><strong>School:</strong> Mapúa University</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="certifications" class="content-section" style="display:none;">
+            <h2>Certifications</h2>
+            <div class="upload-container">
+                <input type="file" id="cert-upload" accept="image/*,application/pdf" />
+                <button onclick="addCertification()">Upload to Gallery</button>
+            </div>
+            <div id="cert-gallery" class="gallery">
+                </div>
+        </section>
+
+        </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
