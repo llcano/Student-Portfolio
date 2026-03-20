@@ -1,79 +1,78 @@
-:root {
-    --mapua-red: #8B0000;
-    --dark-grey: #333;
-    --light-grey: #f4f4f4;
+/* Layout Configuration */
+.main-layout-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 2fr; /* 1/4, 1/4, and 2/4 (50%) */
+    gap: 40px;
+    margin-top: 30px;
+    align-items: start;
 }
 
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    margin: 0;
-    line-height: 1.6;
-    color: var(--dark-grey);
+/* Column 1: Profile Photo & Mini Card */
+.profile-photo {
+    width: 100%;
+    max-width: 200px;
+    border-radius: 8px;
+    border: 3px solid var(--mapua-red);
+    margin-bottom: 15px;
 }
 
-.navbar {
-    background: var(--mapua-red);
-    color: white;
-    padding: 1rem 2rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: sticky;
-    top: 0;
+.profile-card-mini {
+    font-size: 0.85rem;
+    line-height: 1.4;
+    border-top: 1px solid #ddd;
+    padding-top: 10px;
 }
 
-.nav-links {
+/* Column 2: About Me (Restricted to Quarter) */
+.about-me-column {
+    border-right: 1px solid #eee;
+    padding-right: 20px;
+}
+
+.about-me-column p {
+    font-size: 0.95rem;
+    text-align: justify;
+}
+
+/* Column 3: SOIT Content Blocks */
+.soit-block {
+    margin-bottom: 25px;
+}
+
+.soit-block h3 {
+    color: var(--mapua-red);
+    text-transform: uppercase;
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+    border-bottom: 2px solid var(--mapua-red);
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+.skills-list {
     list-style: none;
-    display: flex;
+    padding: 0;
 }
 
-.nav-links li {
-    margin-left: 20px;
+.skills-list li {
+    margin-bottom: 10px;
+    padding-left: 15px;
+    position: relative;
 }
 
-.nav-links a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
+.skills-list li::before {
+    content: "▪";
+    color: var(--mapua-red);
+    position: absolute;
+    left: 0;
 }
 
-.content-section {
-    padding: 40px 10%;
-}
-
-.hero {
-    text-align: center;
-    padding: 50px 0;
-    background: var(--light-grey);
-    margin-bottom: 20px;
-}
-
-.profile-grid {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    gap: 30px;
-}
-
-.upload-container {
-    margin-bottom: 30px;
-    padding: 20px;
-    border: 2px dashed #ccc;
-    text-align: center;
-}
-
-.gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    gap: 20px;
-}
-
-.cert-item {
-    border: 1px solid #ddd;
-    padding: 10px;
-    text-align: center;
-}
-
-.cert-item img {
-    max-width: 100%;
-    height: auto;
+/* Responsive for Mobile */
+@media (max-width: 900px) {
+    .main-layout-grid {
+        grid-template-columns: 1fr;
+    }
+    .about-me-column {
+        border-right: none;
+    }
 }
