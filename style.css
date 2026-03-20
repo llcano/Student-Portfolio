@@ -1,0 +1,79 @@
+:root {
+    --mapua-red: #8B0000;
+    --dark-grey: #333;
+    --light-grey: #f4f4f4;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    line-height: 1.6;
+    color: var(--dark-grey);
+}
+
+.navbar {
+    background: var(--mapua-red);
+    color: white;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.content-section {
+    padding: 40px 10%;
+}
+
+.hero {
+    text-align: center;
+    padding: 50px 0;
+    background: var(--light-grey);
+    margin-bottom: 20px;
+}
+
+.profile-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 30px;
+}
+
+.upload-container {
+    margin-bottom: 30px;
+    padding: 20px;
+    border: 2px dashed #ccc;
+    text-align: center;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.cert-item {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+}
+
+.cert-item img {
+    max-width: 100%;
+    height: auto;
+}
